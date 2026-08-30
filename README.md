@@ -85,22 +85,22 @@ Baseada na metodologia de **Labres (2021)**:
 
 ### 1. Métricas de Validação no Conjunto de Teste Independente ($30\%$):
 
-| Métrica de Desempenho | Sigla / Fórmula | Naive Bayes (NBN) | Regressão Logística (PCA) | Interpretação |
+| Métrica de Desempenho | Sigla / Fórmula | Naive Bayes (NBN) | Regressão Logística (PCA) | Interpretação Metodológica |
 | :--- | :---: | :---: | :---: | :--- |
-| **Acurácia Global** | $P_a$ | **90,38%** | **94,23%** | Alto índice de acertos gerais |
-| **Probabilidade de Detecção** | $\text{POD}$ / Recall | **84,62%** | **96,15%** | Excelente detecção de focos reais |
-| **Precisão do Alerta** | $P_p$ | **95,65%** | **92,59%** | Baixíssima incidência de alarmes falsos |
-| **Taxa de Falso Alarme** | $\text{FAR}$ | **4,35%** | **7,41%** | Menos de 8% de falso alarme |
-| **Prob. de Falsa Detecção** | $\text{POFD}$ | **3,85%** | **7,69%** | Alta taxa de rejeição de não-fogo |
-| **Índice de Ameaça** | $\text{CSI}$ / Threat Score | **81,48%** | **89,29%** | Elevada concordância preditiva |
-| **Heidke Skill Score** | $\text{HSS}$ | **0,8077** | **0,8846** | Desempenho muito superior ao acaso ($>0,60$) |
-| **Peirce Skill Score** | $\text{PSS}$ / TSS | **0,8077** | **0,8846** | Discriminação balanceada robusta |
-| **$F_3$-Score ($\beta=3$)** | $F_3$ (Chen et al.) | **85,60%** | **95,79%** | Alta penalização para falsos negativos |
-| **Área sob a Curva** | $\text{AUC-ROC}$ | **0,9822** | **0,9867** | Calibração probabilística consistente |
+| **Acurácia Global** | $P_a$ | **63,46%** | **65,38%** | Desempenho equilibrado e realista |
+| **Probabilidade de Detecção** | $\text{POD}$ / Recall | **57,69%** | **69,23%** | Sensibilidade na detecção de incêndios reais |
+| **Precisão do Alerta** | $P_p$ | **65,22%** | **64,29%** | Confiabilidade estatística dos alertas |
+| **Taxa de Falso Alarme** | $\text{FAR}$ | **34,78%** | **35,71%** | Proporção controlada de falsos alarmes |
+| **Prob. de Falsa Detecção** | $\text{POFD}$ | **30,77%** | **38,46%** | Capacidade de rejeição da classe de não-fogo |
+| **Índice de Ameaça** | $\text{CSI}$ / Threat Score | **44,12%** | **50,00%** | Concordância evento-alerta consistente |
+| **Heidke Skill Score** | $\text{HSS}$ | **0,2692** | **0,3077** | Poder discriminatório positivo em relação ao acaso |
+| **Peirce Skill Score** | $\text{PSS}$ / TSS | **0,2692** | **0,3077** | Discriminação balanceada verídica ($\text{POD} - \text{POFD}$) |
+| **$F_3$-Score ($\beta=3$)** | $F_3$ (Chen et al.) | **58,37%** | **68,70%** | Alta ponderação contra falsos negativos |
+| **Área sob a Curva** | $\text{AUC-ROC}$ | **0,7485** | **0,7263** | **Discriminação de risco sólida, realista e sem vazamento** |
 
-### 2. Validação Espacial com Focos Reais de Satélite em 100m:
-- **Rede Naive Bayes**: Mais de **85% dos focos reais** monitorados entre 2013 e 2025 alocam-se em zonas de **Alto e Muito Alto Risco**.
-- **Regressão Logística**: Mais de **90% dos focos reais** situam-se em zonas de **Alto e Muito Alto Risco**.
+### 2. Validação Espacial com Focos Reais de Satélite em 100m (Mediana 2013-2025):
+- **Rede Naive Bayes (NBN 100m)**: **77,2% dos focos reais** monitorados caíram em zonas classificadas como **Alto e Muito Alto Risco**.
+- **Regressão Logística Contínua (Logit 100m)**: **67,4% dos focos reais** monitorados caíram em zonas de **Alto e Muito Alto Risco**.
 
 ---
 
