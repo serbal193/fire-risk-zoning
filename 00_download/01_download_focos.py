@@ -19,16 +19,11 @@ import io
 import ssl
 import zipfile
 import urllib.request
-import os
 from pathlib import Path
 import numpy as np
 import pandas as pd
 import geopandas as gpd
 from shapely.geometry import Point
-
-# Configuração GDAL/Rasterio/Fiona para caminhos com caracteres especiais (Windows/acentuação)
-os.environ['GDAL_FILENAME_IS_UTF8'] = 'NO'
-os.environ['SHAPE_RESTORE_SHX'] = 'YES'
 
 # Ajusta stdout para UTF-8 no Windows
 if sys.platform == 'win32':

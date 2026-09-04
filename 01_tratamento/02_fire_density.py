@@ -22,12 +22,6 @@ Descrição:
 """
 
 import os
-import sys
-
-# Configuração GDAL/Rasterio/Fiona para caminhos com caracteres especiais (Windows/acentuação)
-os.environ['GDAL_FILENAME_IS_UTF8'] = 'NO'
-os.environ['SHAPE_RESTORE_SHX'] = 'YES'
-
 from pathlib import Path
 import numpy as np
 import pandas as pd

@@ -15,11 +15,6 @@ Descrição:
 
 import sys
 import os
-
-# Configuração GDAL/Rasterio/Fiona para caminhos com caracteres especiais (Windows/acentuação)
-os.environ['GDAL_FILENAME_IS_UTF8'] = 'NO'
-os.environ['SHAPE_RESTORE_SHX'] = 'YES'
-
 import gzip
 import io
 import urllib.request
